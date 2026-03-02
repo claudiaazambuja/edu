@@ -17,8 +17,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="text-lg font-bold text-primary">
-          Base Forte Bagé
+        <Link href="/" className="flex items-center gap-3">
+          <img src="/logo-base.svg" alt="Logo Base Forte Bagé" className="h-10 w-10 rounded-full bg-black object-cover" />
+          <span className="text-lg font-bold text-primary">Base Forte Bagé</span>
         </Link>
         <nav aria-label="Navegação principal" className="hidden gap-5 md:flex">
           {links.map((link) => (

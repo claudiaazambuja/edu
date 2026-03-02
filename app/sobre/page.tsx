@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SectionTitle } from '@/components/SectionTitle';
 import { SeriesPills } from '@/components/SeriesPills';
-import { AGENDAR_EMAIL_LINK } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Sobre | Base Forte Bagé',
@@ -50,9 +50,9 @@ export default function SobrePage() {
           <li>• Acompanha devolutivas sobre avanços e pontos de atenção.</li>
           <li>• Ajuda a manter uma rotina leve de estudo semanal.</li>
         </ul>
-        <a href={AGENDAR_EMAIL_LINK} className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700">
-          Agendar avaliação por e-mail
-        </a>
+        <Link href="/contato" className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700">
+          Agendar avaliação
+        </Link>
       </section>
     </div>
   );

@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import { BookOpenText, Calculator, CheckCircle2, PenSquare } from 'lucide-react';
 import { Card } from '@/components/Card';
 import { FAQAccordion } from '@/components/FAQAccordion';
 import { SectionTitle } from '@/components/SectionTitle';
 import { SeriesPills } from '@/components/SeriesPills';
-import { AGENDAR_EMAIL_LINK, WHATSAPP_LINK } from '@/lib/constants';
+import { WHATSAPP_LINK } from '@/lib/constants';
 
 export default function HomePage() {
   return (
@@ -20,9 +21,9 @@ export default function HomePage() {
           <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700 focus:outline-none focus:ring-4 focus:ring-rose-200">
             Falar no WhatsApp
           </a>
-          <a href={AGENDAR_EMAIL_LINK} className="rounded-full border border-rose-200 bg-white px-5 py-3 font-semibold text-slate-700 hover:bg-rose-50">
+          <Link href="/contato" className="rounded-full border border-rose-200 bg-white px-5 py-3 font-semibold text-slate-700 hover:bg-rose-50">
             Agendar avaliação
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -96,7 +97,7 @@ export default function HomePage() {
           Seu filho(a) pode avançar com leitura, escrita e matemática com um plano feito para a série dele(a).
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
-          <a href={AGENDAR_EMAIL_LINK} className="rounded-full bg-white px-5 py-3 font-semibold text-primary hover:bg-rose-50">Agendar avaliação</a>
+          <Link href="/contato" className="rounded-full bg-white px-5 py-3 font-semibold text-primary hover:bg-rose-50">Agendar avaliação</Link>
           <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full border border-white px-5 py-3 font-semibold text-white hover:bg-rose-700">Quero um plano por série</a>
         </div>
       </section>

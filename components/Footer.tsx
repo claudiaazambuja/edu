@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AGENDAR_EMAIL_LINK, CONTACT_EMAIL, WHATSAPP_DISPLAY, WHATSAPP_LINK } from '@/lib/constants';
+import { WHATSAPP_DISPLAY, WHATSAPP_LINK } from '@/lib/constants';
 
 export function Footer() {
   return (
@@ -22,12 +22,6 @@ export function Footer() {
                 {WHATSAPP_DISPLAY}
               </a>
             </li>
-            <li>
-              E-mail:{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-primary hover:underline">
-                {CONTACT_EMAIL}
-              </a>
-            </li>
           </ul>
         </div>
 
@@ -37,9 +31,9 @@ export function Footer() {
             <Link href="/servicos" className="font-semibold text-primary hover:underline">
               Conhecer serviços
             </Link>
-            <a href={AGENDAR_EMAIL_LINK} className="font-semibold text-primary hover:underline">
-              Agendar avaliação por e-mail
-            </a>
+            <Link href="/contato" className="font-semibold text-primary hover:underline">
+              Agendar avaliação
+            </Link>
           </div>
         </div>
       </div>

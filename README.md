@@ -34,6 +34,15 @@ Link final usado no site:
 `https://wa.me/5553984693364?text=<URL_ENCODED_MESSAGE>`
 
 
+
+## Envio automático do formulário
+Para manter compatibilidade com GitHub Pages (site estático), o formulário de contato usa envio via `formsubmit.co` direto do navegador.
+
+- Destino configurado: `cclabdis@gmail.com`
+- Não abre o aplicativo de e-mail do usuário.
+
+> Observação: `nodemailer` exige backend/servidor (API) e não funciona em hospedagem estática pura do GitHub Pages.
+
 ## Preciso de `.env`?
 Não é obrigatório para o deploy no GitHub Pages.
 
