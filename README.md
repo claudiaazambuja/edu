@@ -33,6 +33,28 @@ O build exportado será gerado em `out/`.
 Link final usado no site:
 `https://wa.me/5553984693364?text=<URL_ENCODED_MESSAGE>`
 
+
+## Preciso de `.env`?
+Não é obrigatório para o deploy no GitHub Pages.
+
+- **No GitHub Actions**: o workflow já define `NEXT_PUBLIC_BASE_PATH` automaticamente com `actions/configure-pages`.
+- **Localmente**: você só precisa de `.env.local` se quiser simular o subcaminho do repositório.
+
+### Onde colocar `NEXT_PUBLIC_BASE_PATH`
+Na raiz do projeto, em um arquivo **`.env.local`** (não versionado):
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/edu
+```
+
+> Exemplo para este repositório: como a URL é `https://claudiaazambuja.github.io/edu/`, o valor é `/edu`.
+
+Também é possível rodar sem arquivo `.env.local`:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/edu npm run build
+```
+
 ## Publicação no GitHub Pages
 O repositório já inclui workflow em `.github/workflows/deploy.yml` para publicar ao fazer push na branch `main`.
 
@@ -65,3 +87,13 @@ Se você estiver vendo a página da README (como no print), normalmente você es
   - `https://github.com/USUARIO/REPO`
 - URL do site publicado (GitHub Pages):
   - `https://USUARIO.github.io/REPO/`
+
+
+## Se ainda aparecer README no link do Pages
+Isso normalmente significa que o repositório ainda está publicando por **Branch** (Jekyll) ou o workflow não disparou na branch correta.
+
+Checklist:
+1. Em **Settings > Pages**, deixe **Source = GitHub Actions**.
+2. Confirme a branch onde você faz push (`main` ou `master`).
+3. Abra a aba **Actions** e verifique o workflow **Deploy to GitHub Pages** executado com sucesso.
+4. Após deploy, acesse novamente: `https://claudiaazambuja.github.io/edu/`.
