@@ -17,7 +17,7 @@ export default function ServicosPage() {
       <SectionTitle title="Serviços" subtitle="Formatos flexíveis para atender o que seu filho(a) precisa hoje." />
 
       <section className="grid gap-4 md:grid-cols-2">
-        {['Reforço individual', 'Pequenos grupos', 'Plano semanal de estudos', 'Acompanhamento com devolutivas para pais/responsáveis'].map((item) => (
+        {['Reforço individual', 'Pequenos grupos', 'Clube de leitura infantil', 'Plano semanal de estudos', 'Acompanhamento com devolutivas para pais/responsáveis'].map((item) => (
           <div key={item} className="rounded-2xl border border-slate-200 p-5 font-semibold text-slate-700">{item}</div>
         ))}
       </section>
@@ -35,6 +35,7 @@ export default function ServicosPage() {
           <tbody>
             <tr className="border-t"><td className="p-4">Individual</td><td className="p-4">Precisa de foco total em lacunas específicas</td><td className="p-4">Devolutiva frequente</td></tr>
             <tr className="border-t"><td className="p-4">Pequeno grupo</td><td className="p-4">Aprende bem com interação e rotina</td><td className="p-4">Relatórios por etapa</td></tr>
+            <tr className="border-t"><td className="p-4">Clube de leitura infantil</td><td className="p-4">Precisa ganhar gosto pela leitura e ampliar vocabulário</td><td className="p-4">Registros de evolução leitora</td></tr>
             <tr className="border-t"><td className="p-4">Plano semanal</td><td className="p-4">Família quer organizar estudos em casa</td><td className="p-4">Orientações práticas</td></tr>
           </tbody>
         </table>
@@ -46,6 +47,7 @@ export default function ServicosPage() {
           <li>• Está no 2º ano e ainda está firmando a alfabetização</li>
           <li>• No 4º ano, mas tem insegurança em contas e problemas</li>
           <li>• Dificuldade com ortografia e produção de texto</li>
+          <li>• Precisa criar rotina de leitura prazerosa em casa</li>
         </ul>
         <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700">
           Quero um plano por série
