@@ -96,4 +96,5 @@ Checklist:
 1. Em **Settings > Pages**, deixe **Source = GitHub Actions**.
 2. Confirme a branch onde você faz push (`main` ou `master`).
 3. Abra a aba **Actions** e verifique o workflow **Deploy to GitHub Pages** executado com sucesso.
-4. Após deploy, acesse novamente: `https://claudiaazambuja.github.io/edu/`.
+4. Se o workflow falhar em segundos, confirme se ele não está exigindo cache com `package-lock.json` ausente (neste projeto o workflow já foi ajustado para não depender disso).
+5. Após deploy, acesse novamente: `https://claudiaazambuja.github.io/edu/`.
