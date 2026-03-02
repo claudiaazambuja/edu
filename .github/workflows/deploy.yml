@@ -36,6 +36,7 @@ jobs:
         run: echo "NEXT_PUBLIC_BASE_PATH=$NEXT_PUBLIC_BASE_PATH"
 
       - name: Build static export
+
         run: npm run build
 
       - name: Ensure .nojekyll
