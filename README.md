@@ -45,8 +45,9 @@ O repositório já inclui workflow em `.github/workflows/deploy.yml` para public
 ### NEXT_PUBLIC_BASE_PATH
 Para GitHub Pages em projeto (ex.: `https://usuario.github.io/nome-repo/`), o app usa `NEXT_PUBLIC_BASE_PATH` para `basePath` e `assetPrefix`.
 
-- No workflow, essa variável é definida automaticamente como:
-  - `/NOME_DO_REPOSITORIO`
+- No workflow, essa variável é definida automaticamente pelo `actions/configure-pages` (saída `base_path`).
+  - Exemplo em projeto: `/edu`
+  - Exemplo em user site (`usuario.github.io`): vazio (`""`)
 - Localmente, normalmente deixe vazio.
 - Se quiser simular localmente com basePath:
   ```bash
