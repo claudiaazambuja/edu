@@ -37,7 +37,7 @@ Link final usado no site:
 ## Preciso de `.env`?
 Não é obrigatório para o deploy no GitHub Pages.
 
-- **No GitHub Actions**: o workflow já define `NEXT_PUBLIC_BASE_PATH` automaticamente com `actions/configure-pages`.
+- **No GitHub Actions**: o workflow já define `NEXT_PUBLIC_BASE_PATH` automaticamente usando o nome do repositório.
 - **Localmente**: você só precisa de `.env.local` se quiser simular o subcaminho do repositório.
 
 ### Onde colocar `NEXT_PUBLIC_BASE_PATH`
@@ -67,9 +67,8 @@ O repositório já inclui workflow em `.github/workflows/deploy.yml` para public
 ### NEXT_PUBLIC_BASE_PATH
 Para GitHub Pages em projeto (ex.: `https://usuario.github.io/nome-repo/`), o app usa `NEXT_PUBLIC_BASE_PATH` para `basePath` e `assetPrefix`.
 
-- No workflow, essa variável é definida automaticamente pelo `actions/configure-pages` (saída `base_path`).
-  - Exemplo em projeto: `/edu`
-  - Exemplo em user site (`usuario.github.io`): vazio (`""`)
+- No workflow, essa variável é definida automaticamente com o nome do repositório (`/${GITHUB_REPOSITORY#*/}`).
+  - Exemplo neste repositório: `/edu`
 - Localmente, normalmente deixe vazio.
 - Se quiser simular localmente com basePath:
   ```bash
@@ -96,5 +95,5 @@ Checklist:
 1. Em **Settings > Pages**, deixe **Source = GitHub Actions**.
 2. Confirme a branch onde você faz push (`main` ou `master`).
 3. Abra a aba **Actions** e verifique o workflow **Deploy to GitHub Pages** executado com sucesso.
-4. Se o workflow falhar em segundos, confirme se ele não está exigindo cache com `package-lock.json` ausente (neste projeto o workflow já foi ajustado para não depender disso).
+4. Se o workflow falhar em segundos, confirme em **Settings > Pages** que o Source está em **GitHub Actions** (não "Deploy from a branch").
 5. Após deploy, acesse novamente: `https://claudiaazambuja.github.io/edu/`.
