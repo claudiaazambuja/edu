@@ -16,6 +16,6 @@ const nextConfig: NextConfig = {
   basePath: normalizedBasePath,
   assetPrefix: normalizedBasePath || undefined,
   trailingSlash: true,
-
+};
 
 export default nextConfig;

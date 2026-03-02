@@ -46,7 +46,7 @@ O repositório já inclui workflow em `.github/workflows/deploy.yml` para public
 Para GitHub Pages em projeto (ex.: `https://usuario.github.io/nome-repo/`), o app usa `NEXT_PUBLIC_BASE_PATH` para `basePath` e `assetPrefix`.
 
 - No workflow, essa variável é definida automaticamente como:
-  - `/${{ github.event.repository.name }}`
+  - `/NOME_DO_REPOSITORIO`
 - Localmente, normalmente deixe vazio.
 - Se quiser simular localmente com basePath:
   ```bash
@@ -56,3 +56,11 @@ Para GitHub Pages em projeto (ex.: `https://usuario.github.io/nome-repo/`), o ap
 ### Exemplo de URL final
 Se o usuário for `educa` e o repositório `base-forte-bage`, a URL será:
 `https://educa.github.io/base-forte-bage/`
+
+## Troubleshooting rápido
+Se você estiver vendo a página da README (como no print), normalmente você está abrindo a URL do repositório no GitHub, e não a URL publicada do Pages.
+
+- URL do repositório (mostra código/README):
+  - `https://github.com/USUARIO/REPO`
+- URL do site publicado (GitHub Pages):
+  - `https://USUARIO.github.io/REPO/`
