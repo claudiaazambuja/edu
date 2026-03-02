@@ -40,14 +40,14 @@ export default function ServicosPage() {
         </table>
       </section>
 
-      <section className="mt-12 rounded-2xl bg-amber-50 p-6">
+      <section className="mt-12 rounded-2xl bg-rose-50 p-6">
         <SectionTitle title="Indicado para" />
         <ul className="space-y-2 text-slate-700">
           <li>• Está no 2º ano e ainda está firmando a alfabetização</li>
           <li>• No 4º ano, mas tem insegurança em contas e problemas</li>
           <li>• Dificuldade com ortografia e produção de texto</li>
         </ul>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-blue-700">
+        <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700">
           Quero um plano por série
         </a>
       </section>

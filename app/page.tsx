@@ -1,16 +1,14 @@
-import Link from 'next/link';
 import { BookOpenText, Calculator, CheckCircle2, PenSquare } from 'lucide-react';
 import { Card } from '@/components/Card';
 import { FAQAccordion } from '@/components/FAQAccordion';
 import { SectionTitle } from '@/components/SectionTitle';
 import { SeriesPills } from '@/components/SeriesPills';
-import { TestimonialCard } from '@/components/TestimonialCard';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import { AGENDAR_EMAIL_LINK, WHATSAPP_LINK } from '@/lib/constants';
 
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-      <section className="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-amber-50 p-8 md:p-12">
+      <section className="rounded-3xl bg-gradient-to-br from-rose-50 via-white to-pink-50 p-8 md:p-12">
         <SeriesPills />
         <h1 className="mt-5 text-3xl font-extrabold leading-tight text-ink sm:text-5xl">
           Leitura, escrita e matemática: base forte até a 4ª série
@@ -19,12 +17,12 @@ export default function HomePage() {
           Apoio individual e em pequenos grupos em Bagé/RS para crianças do 1º ao 4º ano.
         </p>
         <div className="mt-7 flex flex-wrap gap-3">
-          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700 focus:outline-none focus:ring-4 focus:ring-rose-200">
             Falar no WhatsApp
           </a>
-          <Link href="/contato" className="rounded-full border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 hover:bg-slate-100">
+          <a href={AGENDAR_EMAIL_LINK} className="rounded-full border border-rose-200 bg-white px-5 py-3 font-semibold text-slate-700 hover:bg-rose-50">
             Agendar avaliação
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -67,7 +65,7 @@ export default function HomePage() {
             '2) Plano de estudos por série (1º, 2º, 3º, 4º)',
             '3) Acompanhamento com devolutivas para a família',
           ].map((step) => (
-            <div key={step} className="rounded-2xl bg-slate-50 p-5 font-semibold text-slate-700">{step}</div>
+            <div key={step} className="rounded-2xl bg-rose-50 p-5 font-semibold text-slate-700">{step}</div>
           ))}
         </div>
       </section>
@@ -82,18 +80,9 @@ export default function HomePage() {
             'Mais segurança nas quatro operações e problemas simples',
             'Rotina de estudos mais tranquila em casa',
           ].map((item) => (
-            <li key={item} className="rounded-xl border border-slate-200 p-4">{item}</li>
+            <li key={item} className="rounded-xl border border-rose-100 p-4">{item}</li>
           ))}
         </ul>
-      </section>
-
-      <section className="mt-14">
-        <SectionTitle title="Depoimentos de famílias" />
-        <div className="grid gap-4 md:grid-cols-3">
-          <TestimonialCard name="Juliana, mãe do Pedro" grade="2º ano" text="Ele ganhou confiança para ler em voz alta e hoje participa mais na escola." />
-          <TestimonialCard name="Carlos, pai da Ana" grade="4º ano" text="A organização da escrita melhorou bastante. Agora ela já consegue revisar pequenos textos." />
-          <TestimonialCard name="Marina, mãe da Sofia" grade="3º ano" text="Com o plano semanal, a rotina em casa ficou mais leve e as contas básicas fluíram melhor." />
-        </div>
       </section>
 
       <section className="mt-14">
@@ -103,12 +92,12 @@ export default function HomePage() {
 
       <section className="mt-14 rounded-2xl bg-primary p-8 text-white">
         <h2 className="text-2xl font-bold">Vamos construir uma base forte juntos?</h2>
-        <p className="mt-2 max-w-2xl text-blue-100">
+        <p className="mt-2 max-w-2xl text-rose-100">
           Seu filho(a) pode avançar com leitura, escrita e matemática com um plano feito para a série dele(a).
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
-          <Link href="/contato" className="rounded-full bg-white px-5 py-3 font-semibold text-primary hover:bg-blue-50">Agendar avaliação</Link>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full border border-white px-5 py-3 font-semibold text-white hover:bg-blue-700">Quero um plano por série</a>
+          <a href={AGENDAR_EMAIL_LINK} className="rounded-full bg-white px-5 py-3 font-semibold text-primary hover:bg-rose-50">Agendar avaliação</a>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full border border-white px-5 py-3 font-semibold text-white hover:bg-rose-700">Quero um plano por série</a>
         </div>
       </section>
     </div>

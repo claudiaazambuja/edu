@@ -6,7 +6,7 @@ export function SeriesPills() {
       {series.map((serie) => (
         <span
           key={serie}
-          className="rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-semibold text-primary"
+          className="rounded-full border border-rose-200 bg-rose-50 px-4 py-1 text-sm font-semibold text-primary"
         >
           {serie}
         </span>

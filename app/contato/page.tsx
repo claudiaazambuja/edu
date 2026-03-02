@@ -15,7 +15,7 @@ export default function ContatoPage() {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-extrabold text-ink">Contato</h1>
       <p className="mt-3 text-slate-600">
-        Preencha o formulário para agendar avaliação. Se preferir, abra o WhatsApp com mensagem pronta.
+        Preencha o formulário e clique em “Agendar avaliação por e-mail”. O seu app de e-mail abrirá com os dados preenchidos para enviar para cclabdis@gmail.com.
       </p>
       <ContactForm />
     </div>

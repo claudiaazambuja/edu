@@ -35,7 +35,7 @@ export function Header() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200"
+          className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-rose-700 focus:outline-none focus:ring-4 focus:ring-rose-200"
         >
           Falar no WhatsApp
         </a>

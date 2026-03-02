@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_LINK } from '@/lib/constants';
+import { WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_LINK, createScheduleEmailLink } from '@/lib/constants';
 
 type FormState = {
   responsavel: string;
@@ -41,12 +41,15 @@ export function ContactForm() {
       setSuccess(false);
       return;
     }
+
+    const mailtoLink = createScheduleEmailLink(form);
     setSuccess(true);
+    window.location.href = mailtoLink;
     setForm(initialState);
   }
 
   return (
-    <form className="mt-8 space-y-5 rounded-2xl border border-slate-200 p-6" onSubmit={onSubmit} noValidate>
+    <form className="mt-8 space-y-5 rounded-2xl border border-rose-100 p-6" onSubmit={onSubmit} noValidate>
       {[
         { key: 'responsavel', label: 'Nome do responsável', type: 'text' },
         { key: 'crianca', label: 'Nome da criança', type: 'text' },
@@ -57,7 +60,7 @@ export function ContactForm() {
           <input
             id={field.key}
             type={field.type}
-            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-blue-100"
+            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
             value={form[field.key as keyof FormState]}
             onChange={(e) => setForm((prev) => ({ ...prev, [field.key]: e.target.value }))}
             aria-invalid={Boolean(errors[field.key as keyof FormState])}
@@ -70,7 +73,7 @@ export function ContactForm() {
         <label htmlFor="serie" className="mb-1 block font-medium text-ink">Série (1º ao 4º ano)</label>
         <select
           id="serie"
-          className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-blue-100"
+          className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
           value={form.serie}
           onChange={(e) => setForm((prev) => ({ ...prev, serie: e.target.value }))}
           aria-invalid={Boolean(errors.serie)}
@@ -89,7 +92,7 @@ export function ContactForm() {
         <textarea
           id="mensagem"
           rows={4}
-          className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-blue-100"
+          className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
           value={form.mensagem}
           onChange={(e) => setForm((prev) => ({ ...prev, mensagem: e.target.value }))}
           aria-invalid={Boolean(errors.mensagem)}
@@ -98,8 +101,8 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-wrap gap-3">
-        <button type="submit" className="rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-blue-700">
-          Agendar avaliação
+        <button type="submit" className="rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700">
+          Agendar avaliação por e-mail
         </button>
         <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full border border-green-600 px-5 py-3 font-semibold text-green-700 hover:bg-green-50">
           Abrir WhatsApp
@@ -107,7 +110,7 @@ export function ContactForm() {
       </div>
 
       <p className="text-sm text-slate-500">Mensagem padrão do WhatsApp: {WHATSAPP_DEFAULT_MESSAGE}</p>
-      {success ? <p className="rounded-xl bg-green-50 p-3 text-green-700">Mensagem enviada! Em breve entraremos em contato.</p> : null}
+      {success ? <p className="rounded-xl bg-rose-50 p-3 text-rose-700">Abrindo seu e-mail para envio da solicitação.</p> : null}
     </form>
   );
 }
