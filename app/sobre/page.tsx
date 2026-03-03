@@ -19,15 +19,15 @@ export default function SobrePage() {
       <SeriesPills />
 
       <section className="mt-10 grid gap-6 md:grid-cols-2">
-        <div className="rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-xl font-bold text-ink">Missão</h2>
-          <p className="mt-3 text-slate-600">
+        <div className="rounded-2xl border border-slate-200 p-6 dark:border-slate-700 dark:bg-slate-800/95">
+          <h2 className="text-xl font-bold text-ink dark:text-slate-100">Missão</h2>
+          <p className="mt-3 text-slate-600 dark:text-slate-300">
             Ajudar seu filho(a) a consolidar leitura, escrita e matemática com acompanhamento acolhedor e metas reais.
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-xl font-bold text-ink">Para quem é</h2>
-          <p className="mt-3 text-slate-600">
+        <div className="rounded-2xl border border-slate-200 p-6 dark:border-slate-700 dark:bg-slate-800/95">
+          <h2 className="text-xl font-bold text-ink dark:text-slate-100">Para quem é</h2>
+          <p className="mt-3 text-slate-600 dark:text-slate-300">
             Crianças do 1º ao 4º ano com dificuldades de aprendizagem ou que precisam de reforço para avançar com segurança.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function SobrePage() {
 
       <section className="mt-12">
         <SectionTitle title="Metodologia" />
-        <ul className="space-y-3 text-slate-700">
+        <ul className="space-y-3 text-slate-700 dark:text-slate-300">
           <li>• Atividades lúdicas + prática guiada</li>
           <li>• Rotina de leitura com textos adequados à série</li>
           <li>• Escrita com modelos e revisões simples</li>
@@ -43,9 +43,9 @@ export default function SobrePage() {
         </ul>
       </section>
 
-      <section className="mt-12 rounded-2xl bg-slate-50 p-6">
+      <section className="mt-12 rounded-2xl bg-slate-50 p-6 dark:bg-slate-800/95">
         <SectionTitle title="Como a família participa" />
-        <ul className="space-y-2 text-slate-700">
+        <ul className="space-y-2 text-slate-700 dark:text-slate-300">
           <li>• Recebe orientações simples para apoiar em casa sem sobrecarregar.</li>
           <li>• Acompanha devolutivas sobre avanços e pontos de atenção.</li>
           <li>• Ajuda a manter uma rotina leve de estudo semanal.</li>
