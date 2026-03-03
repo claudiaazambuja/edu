@@ -12,7 +12,7 @@ export default function HomePage() {
       <section className="rounded-3xl bg-gradient-to-br from-rose-100 via-rose-50 to-pink-100 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 p-8 md:p-12">
         <SeriesPills />
         <h1 className="mt-5 text-3xl font-extrabold leading-tight text-ink dark:text-slate-100 sm:text-5xl">
-          Leitura, escrita e matemática: base forte até a 4ª série
+          Leitura, escrita e matemática
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
           Apoio individual e em pequenos grupos em Bagé/RS para crianças do 1º ao 4º ano.
@@ -92,7 +92,7 @@ export default function HomePage() {
       </section>
 
       <section className="mt-14 rounded-2xl bg-primary p-8 text-white">
-        <h2 className="text-2xl font-bold">Vamos construir uma base forte juntos?</h2>
+        <h2 className="text-2xl font-bold">Vamos construir uma Base Educação juntos?</h2>
         <p className="mt-2 max-w-2xl text-rose-50">
           Seu filho(a) pode avançar com leitura, escrita e matemática com um plano feito para a série dele(a).
         </p>

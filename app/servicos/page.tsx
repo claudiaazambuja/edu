@@ -3,10 +3,10 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { WHATSAPP_LINK } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Serviços | Base Forte Bagé',
+  title: 'Serviços | Base Educação Bagé',
   description: 'Conheça os formatos de reforço escolar para crianças do 1º ao 4º ano em Bagé/RS.',
   openGraph: {
-    title: 'Serviços | Base Forte Bagé',
+    title: 'Serviços | Base Educação Bagé',
     description: 'Reforço individual, pequenos grupos e plano semanal por série.',
   },
 };

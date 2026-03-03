@@ -4,10 +4,10 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { SeriesPills } from '@/components/SeriesPills';
 
 export const metadata: Metadata = {
-  title: 'Sobre | Base Forte Bagé',
+  title: 'Sobre | Base Educação Bagé',
   description: 'Conheça a missão, metodologia e participação da família no apoio escolar do 1º ao 4º ano.',
   openGraph: {
-    title: 'Sobre | Base Forte Bagé',
+    title: 'Sobre | Base Educação Bagé',
     description: 'Missão e metodologia para fortalecer leitura, escrita e matemática até a 4ª série.',
   },
 };

@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contato | Base Forte Bagé',
+  title: 'Contato | Base Educação Bagé',
   description: 'Agende avaliação e fale com a equipe pelo WhatsApp para apoio do 1º ao 4º ano.',
   openGraph: {
-    title: 'Contato | Base Forte Bagé',
+    title: 'Contato | Base Educação Bagé',
     description: 'Formulário e WhatsApp para atendimento em Bagé/RS.',
   },
 };

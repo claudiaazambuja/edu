@@ -71,7 +71,7 @@ export function ContactForm() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          _subject: 'Novo agendamento de avaliação - Base Forte Bagé',
+          _subject: 'Novo agendamento de avaliação - Base Educação Bagé',
           responsavel: form.responsavel,
           crianca: form.crianca,
           serie: form.serie,
@@ -119,7 +119,7 @@ export function ContactForm() {
             id="telefone"
             type="tel"
             inputMode="numeric"
-            placeholder="(53) 91234-5678"
+            placeholder="( )     -    "
             className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:focus:ring-slate-700"
             value={form.telefone}
             onChange={(e) => setForm((prev) => ({ ...prev, telefone: formatPhone(e.target.value) }))}

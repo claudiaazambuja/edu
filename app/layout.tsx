@@ -6,11 +6,11 @@ import { WhatsAppButton } from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://basefortebage.local'),
-  title: 'Base Forte Bagé | Leitura, Escrita e Matemática até a 4ª série',
+  title: 'Base Educação Bagé | Leitura, Escrita e Matemática até a 4ª série',
   description:
     'Projeto educacional em Bagé/RS para crianças do 1º ao 4º ano com foco em leitura, escrita e matemática.',
   openGraph: {
-    title: 'Base Forte Bagé',
+    title: 'Base Educação Bagé',
     description:
       'Fortalecer a base da educação com leitura, cálculo e escrita para um futuro com mais autonomia.',
     type: 'website',

@@ -1,4 +1,4 @@
-# Base Forte Bagé (Next.js + Tailwind)
+# Base Educação Bagé (Next.js + Tailwind)
 
 Site front-end em PT-BR para Bagé/RS com foco no apoio de crianças do **1º ao 4º ano** em **leitura, escrita e matemática**.
 

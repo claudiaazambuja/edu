@@ -19,8 +19,8 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-rose-200 bg-[#94509A]/80 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo-base2.png" alt="Logo Base Forte Bagé" className="h-10 w-10 object-cover" />
-          <span className="text-lg font-bold text-white">Base Forte Bagé</span>
+          <img src="/logo-base2.png" alt="Logo Base Educação Bagé" className="h-10 w-10 object-cover" />
+          <span className="text-lg font-bold text-white">Base Educação Bagé</span>
         </Link>
         <nav aria-label="Navegação principal" className="hidden gap-5 md:flex">
           {links.map((link) => (
