@@ -1,0 +1,16 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo Base</title>
+  <desc id="desc">Alvo roxo com seta ascendente e texto BASE</desc>
+  <rect width="1024" height="1024" fill="#000000"/>
+  <g transform="translate(512,330)">
+    <circle r="240" fill="none" stroke="#94509A" stroke-width="64"/>
+    <circle r="150" fill="none" stroke="#94509A" stroke-width="64"/>
+    <circle r="55" fill="#94509A"/>
+  </g>
+  <g fill="none" stroke="#D6D7DB" stroke-width="42" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M230 690 L370 500 L460 600 L610 370"/>
+    <path d="M610 370 L575 410"/>
+    <path d="M610 370 L626 452"/>
+  </g>
+  <text x="512" y="950" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="210" letter-spacing="8" fill="#D6D7DB">BASE</text>
+</svg>

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-rose-50 text-ink antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100;
+}
+
+main {
+  @apply min-h-[70vh];
+}
