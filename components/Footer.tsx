@@ -39,7 +39,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-rose-200 dark:border-slate-800 py-4 text-center text-sm text-slate-700 dark:text-slate-300">
-        Base Educação hoje, autonomia amanhã.
+        Base sólida hoje, autonomia amanhã.
       </div>
     </footer>
   );
