@@ -93,17 +93,17 @@ export function ContactForm() {
 
   return (
     <>
-      <form className="mt-8 space-y-5 rounded-2xl border border-rose-100 p-6" onSubmit={onSubmit} noValidate>
+      <form className="mt-8 space-y-5 rounded-2xl border border-rose-100 p-6 dark:border-slate-700 dark:bg-slate-800/95" onSubmit={onSubmit} noValidate>
         {[
           { key: 'responsavel', label: 'Nome do responsável', type: 'text' },
           { key: 'crianca', label: 'Nome da criança', type: 'text' },
         ].map((field) => (
           <div key={field.key}>
-            <label htmlFor={field.key} className="mb-1 block font-medium text-ink">{field.label}</label>
+            <label htmlFor={field.key} className="mb-1 block font-medium text-ink dark:text-slate-100">{field.label}</label>
             <input
               id={field.key}
               type={field.type}
-              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:focus:ring-slate-700"
               value={form[field.key as keyof FormState]}
               onChange={(e) => setForm((prev) => ({ ...prev, [field.key]: e.target.value }))}
               aria-invalid={Boolean(errors[field.key as keyof FormState])}
@@ -114,13 +114,13 @@ export function ContactForm() {
         ))}
 
         <div>
-          <label htmlFor="telefone" className="mb-1 block font-medium text-ink">Telefone (DDD + 9 dígitos)</label>
+          <label htmlFor="telefone" className="mb-1 block font-medium text-ink dark:text-slate-100">Telefone (DDD + 9 dígitos)</label>
           <input
             id="telefone"
             type="tel"
             inputMode="numeric"
-            placeholder="( ) - "
-            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
+            placeholder="(53) 91234-5678"
+            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:focus:ring-slate-700"
             value={form.telefone}
             onChange={(e) => setForm((prev) => ({ ...prev, telefone: formatPhone(e.target.value) }))}
             aria-invalid={Boolean(errors.telefone)}
@@ -130,11 +130,11 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="email" className="mb-1 block font-medium text-ink">E-mail (opcional)</label>
+          <label htmlFor="email" className="mb-1 block font-medium text-ink dark:text-slate-100">E-mail (opcional)</label>
           <input
             id="email"
             type="email"
-            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
+            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:focus:ring-slate-700"
             value={form.email}
             onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
             aria-invalid={Boolean(errors.email)}
@@ -144,10 +144,10 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="serie" className="mb-1 block font-medium text-ink">Série (1º ao 4º ano)</label>
+          <label htmlFor="serie" className="mb-1 block font-medium text-ink dark:text-slate-100">Série (1º ao 4º ano)</label>
           <select
             id="serie"
-            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
+            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:focus:ring-slate-700"
             value={form.serie}
             onChange={(e) => setForm((prev) => ({ ...prev, serie: e.target.value }))}
             aria-invalid={Boolean(errors.serie)}
@@ -163,11 +163,11 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="mensagem" className="mb-1 block font-medium text-ink">Mensagem</label>
+          <label htmlFor="mensagem" className="mb-1 block font-medium text-ink dark:text-slate-100">Mensagem</label>
           <textarea
             id="mensagem"
             rows={4}
-            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100"
+            className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-primary focus:outline-none focus:ring-4 focus:ring-rose-100 dark:border-slate-600 dark:bg-slate-900/60 dark:text-slate-100 dark:focus:ring-slate-700"
             value={form.mensagem}
             onChange={(e) => setForm((prev) => ({ ...prev, mensagem: e.target.value }))}
             aria-invalid={Boolean(errors.mensagem)}
@@ -180,21 +180,21 @@ export function ContactForm() {
           <button type="submit" disabled={sending} className="rounded-full bg-primary px-5 py-3 font-semibold text-white hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-70">
             {sending ? 'Enviando...' : 'Agendar avaliação'}
           </button>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full border border-green-600 px-5 py-3 font-semibold text-green-700 hover:bg-green-50">
+          <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-full border border-green-600 px-5 py-3 font-semibold text-green-700 hover:bg-green-50 dark:text-green-400 dark:hover:bg-green-900/20">
             Abrir WhatsApp
           </a>
         </div>
 
-        <p className="text-sm text-slate-500">Mensagem padrão do WhatsApp: {WHATSAPP_DEFAULT_MESSAGE}</p>
-        {submitError ? <p className="rounded-xl bg-red-50 p-3 text-red-700">{submitError}</p> : null}
+        <p className="text-sm text-slate-500 dark:text-slate-400">Mensagem padrão do WhatsApp: {WHATSAPP_DEFAULT_MESSAGE}</p>
+        {submitError ? <p className="rounded-xl bg-red-50 p-3 text-red-700 dark:bg-red-950/40 dark:text-red-300">{submitError}</p> : null}
       </form>
 
       {showSuccessPopup ? (
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 px-4" role="dialog" aria-modal="true" aria-label="Mensagem de sucesso no agendamento">
-          <div className="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl">
+          <div className="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl dark:bg-slate-800">
             <p className="text-sm font-semibold uppercase tracking-wide text-primary">Solicitação enviada</p>
-            <h3 className="mt-2 text-2xl font-extrabold text-ink">Obrigada pelo contato.</h3>
-            <p className="mt-3 leading-7 text-slate-700">
+            <h3 className="mt-2 text-2xl font-extrabold text-ink dark:text-slate-100">Obrigada pelo contato.</h3>
+            <p className="mt-3 leading-7 text-slate-700 dark:text-slate-300">
               Esse é o primeiro passo para construirmos uma base educacional forte e uma experiência de aprendizagem agradável para sua criança. A solicitação foi enviada com sucesso e em breve retornaremos.
             </p>
             <div className="mt-6 flex justify-end">

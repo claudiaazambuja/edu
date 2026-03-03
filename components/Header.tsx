@@ -16,11 +16,10 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-
-    <header className="sticky top-0 z-40 border-b border-rose-200 bg-[#94509A]/80 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-rose-200 bg-[#94509A]/80 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo-base2.png" alt="Logo Base Forte Bagé" className="h-10 w-10  object-cover" />
+          <img src="/logo-base2.png" alt="Logo Base Forte Bagé" className="h-10 w-10 object-cover" />
           <span className="text-lg font-bold text-white">Base Forte Bagé</span>
         </Link>
         <nav aria-label="Navegação principal" className="hidden gap-5 md:flex">
@@ -39,7 +38,7 @@ export function Header() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-primary hover:bg-rose-50 focus:outline-none focus:ring-4 focus:ring-rose-200"
+            className="rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-primary hover:bg-rose-50 focus:outline-none focus:ring-4 focus:ring-rose-200 dark:bg-white dark:text-primary"
           >
             Falar no WhatsApp
           </a>
