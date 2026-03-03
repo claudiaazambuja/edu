@@ -8,8 +8,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const shouldUseDark = stored ? stored === 'dark' : prefersDark;
+    const shouldUseDark = stored ? stored === 'dark' : false;
     setDark(shouldUseDark);
     document.documentElement.classList.toggle('dark', shouldUseDark);
   }, []);
@@ -25,12 +24,11 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex items-center gap-2 rounded-full border border-white/55 bg-white/25 px-3 py-2 text-xs font-semibold text-white hover:bg-white/35 focus:outline-none focus:ring-2 focus:ring-white/60"
+      className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 shadow-lg transition hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-slate-200 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
       aria-label="Alternar tema claro e escuro"
       title="Alternar tema claro e escuro"
     >
       {dark ? <Sun size={16} aria-hidden="true" /> : <Moon size={16} aria-hidden="true" />}
-      {dark ? 'Tema claro' : 'Tema escuro'}
     </button>
   );
 }

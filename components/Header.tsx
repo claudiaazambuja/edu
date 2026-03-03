@@ -35,15 +35,15 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-primary hover:bg-rose-50 focus:outline-none focus:ring-4 focus:ring-rose-200"
+          >
+            Falar no WhatsApp
+          </a>
           <ThemeToggle />
-        <a
-          href={WHATSAPP_LINK}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full bg-white/95 px-4 py-2 text-sm font-semibold text-primary hover:bg-rose-50 focus:outline-none focus:ring-4 focus:ring-rose-200"
-        >
-          Falar no WhatsApp
-        </a>
         </div>
       </div>
     </header>
