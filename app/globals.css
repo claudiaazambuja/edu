@@ -6,8 +6,12 @@
   color-scheme: light;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
 body {
-  @apply bg-white text-ink antialiased;
+  @apply bg-rose-50 text-ink antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100;
 }
 
 main {
